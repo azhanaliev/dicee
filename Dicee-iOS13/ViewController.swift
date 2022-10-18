@@ -15,16 +15,13 @@ class ViewController: UIViewController {
      
     override func viewDidLoad() {
         super.viewDidLoad()
-        diceeView1.image = UIImage(named: "DiceSix")
-        diceeView2.image = UIImage(named: "DiceTwo")
     }
 
 
     @IBAction func rollButtonPressed(_ sender: UIButton) {
         var dicies = [UIImage(named: "DiceOne"),UIImage(named: "DiceTwo"),UIImage(named: "DiceThree"),UIImage(named: "DiceFour"),UIImage(named: "DiceFive"),UIImage(named: "DiceSix"),]
-        
-        diceeView1.image = dicies[2]
-        diceeView2.image = dicies[3]
+        diceeView1.image = dicies[Int.random(in:0..<6)]
+        diceeView2.image = dicies[Int.random(in:0..<6)]
         
         
     }
